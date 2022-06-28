@@ -1,24 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,rows,columns,a[10][10],sum;
+    int i,j,r,c,a[10][10],s;
+    
     scanf("%d",&i);
-    for(rows=0;rows<i;rows++)
+    
+    for(r=0;r<i;r++)
     {
-        for(columns=0;columns<2;columns++)
+        for(c=0;c<2;c++)
         {
-            scanf("%d",&a[rows][columns]);
+            scanf("%d",&a[r][c]);
         }
     }
-    for(rows=0;rows<i;rows++)
+    for(r=0;r<i;r++)
     {
-        sum=0;
-        for(columns=0;columns<2;columns++)
+        s=0;
+        for(c=0;c<2;c++)
         {
-            sum=sum+a[rows][columns];
+            s=s+a[r][c];
         }
         printf("%d
-",sum);
+",s);
     }
     return 0;
 }

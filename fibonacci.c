@@ -1,16 +1,17 @@
-#include<stdio.h>
-int main()
-{
-    int i,n,t1=0,t2=1,t;
-    scanf("%d",&n);
-    printf("%d %d",t1,t2);
-    t=t1+t2;
-    for(i=0;i<n-2;++i)
-    {
-        printf(" %d",t);
-        t1=t2;
-        t2=t;
-        t=t1+t2;
-    }
-    return 0;
-}
+#include<stdio.h>    
+int main()    
+{    
+ int n1=0,n2=1,n3,i,num;    
+   
+ scanf("%d",&num);    
+ printf("0 1");
+
+ for(i=2;i<num;++i)    
+ {    
+  n3=n1+n2;    
+  printf(" %d",n3);    
+  n1=n2;    
+  n2=n3;    
+ }  
+  return 0;  
+ } 

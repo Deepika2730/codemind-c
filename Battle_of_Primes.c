@@ -1,25 +1,33 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int n1,n2,c,p,s,i,j;
-    scanf("%d%d",&n1,&n2);
-    s=n1+n2;
-    p=s;
-    for(i=1;i<=10;i++)
+    int a,b,s=0,k=0,j,f=0,i,c=0;
+    scanf("%d%d",&a,&b);
+    s=a+b;
+    while(s)
     {
-        p+=1;
-        c=0;
-        for(j=1;j<=p;j++)
+    k++;
+   j=k+s;
+   f=0;
+    for(i=2;i<=sqrt(j);i++)
+    {
+        
+        if(j%i==0)
         {
-            if(p%j==0)
-            {
-                c++;
-            }
-        }
-        if(c==2)
-        {
-            printf("%d",p-s);
+            f=1;
             break;
         }
+        
+    }
+    if(f==0)
+    {
+        printf("%d",k);
+        c=1;
+    }
+    if(c==1)
+    {
+        break;
+    }
     }
 }
